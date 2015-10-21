@@ -1,0 +1,52 @@
+{
+  "manifestVersion": 1,
+  "name": "Money headline",
+  "description": "USA Today money headlines",
+  "version": 1,
+  "versionString": "1",
+  "author": "Swat Yadav",
+  "organization": "",
+  "contactEmail": "",
+  "tileIcon": {
+    "46": "icons/tileIcon.png"
+  },
+  "badgeIcon": {
+    "24": "icons/badgeIcon.png"
+  },
+  "icons": {},
+  "refreshIntervalMinutes": 30,
+  "tileTheme": {
+    "base": "99c814",
+    "highlight": "b1db16",
+    "lowlight": "79a82f",
+    "secondary": "939982",
+    "highContrast": "97db40",
+    "muted": "618e13"
+  },
+  "resources": [
+    {
+      "url": "http://rssfeeds.usatoday.com/UsatodaycomMoney-TopStories",
+      "style": "Feed",
+      "content": {
+        "_1_rsschanneltitle": "/rss/channel/title",
+        "_1_description": "description"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "layout": "MSBand_ScrollingText",
+      "condition": "true",
+      "textBindings": [
+        {
+          "elementId": "1",
+          "value": "{{_1_rsschanneltitle}}"
+        },
+        {
+          "elementId": "2",
+          "value": "{{_1_description}}"
+        }
+      ]
+    }
+  ]
+}
